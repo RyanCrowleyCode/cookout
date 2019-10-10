@@ -1,4 +1,4 @@
-Cookout
+// Cookout. Grillin and Chillin.
 
 // Copy the following objects into your JavaScript file.
 
@@ -33,9 +33,10 @@ const foods = [hamburger, zucchini, chickenBreast, corn, steak];
 
 // An empty array that will store the objects after the `grill()` function cooks the food.
 const cookedFood = [];
-This exercise does not require you to alter this function. But read it. See if you can follow what it takes in, executes, and returns.
 
-The grill() function. Copy this into your JavaScript as well.
+// This exercise does not require you to alter this function. But read it. See if you can follow what it takes in, executes, and returns.
+
+// The grill() function. Copy this into your JavaScript as well.
 
 function grill (currentObject) {
     // Modify the food so that it is cooked
@@ -44,4 +45,13 @@ function grill (currentObject) {
     // Put the cooked food into the appropriate array
     cookedFood.push(currentObject);
 };
-Your task is to iterate over the array of foods and invoke the function for each item so that the cookedFood array contains all of the items after they are cooked.
+// Your task is to iterate over the array of foods and invoke the function for each item so that the cookedFood array contains all of the items after they are cooked.
+
+const cookEverything = function (foodArray) {
+    foodArray.forEach(food => {
+        grill(food)
+    });
+}
+
+cookEverything(foods)
+console.log("Cooked food: ", cookedFood)
